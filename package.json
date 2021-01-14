@@ -1,0 +1,37 @@
+{
+  "name": "backyard-farm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && babel --copy-files --out-dir dist ./src",
+    "devbabel": "$(npm bin)/babel-node --trace-warnings src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alipsilv",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "debug": "^4.3.1",
+    "dotenv": "^8.2.0",
+    "dotenv-expand": "^5.1.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.20",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/register": "^7.12.10",
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "nodemon": "^2.0.7"
+  }
+}
