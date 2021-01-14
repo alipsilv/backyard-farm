@@ -1,4 +1,5 @@
 import CONFIG from './config';
+import routes from './routes/api.routes';
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -15,6 +16,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
     res.json({ message: 'Welcome to backyard-farm api.' });
 });
+
+routes(app);
 
 // set port, listen for requests
 app.listen(CONFIG.PORT, () => {
